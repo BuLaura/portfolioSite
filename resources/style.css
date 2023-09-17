@@ -86,7 +86,7 @@ p {
     height: 3rem;
     background-color: rgb(255, 255, 255);
     border: 0.1rem solid rgb(0, 0, 0);
-    box-shadow: 0.2rem 0.2rem rgba(0, 0, 0, 0.75);
+    box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.75);
     font-family: 'Shadows Into Light', cursive;
     font-size: 1.5rem;
     margin: 0 auto;
@@ -152,7 +152,7 @@ nav li {
 }
 
 .banner {
-    background-image: url('./images/profile.jpeg');
+    background-image: linear-gradient(to bottom, transparent, rgb(255, 255, 255)), url('./images/profile.jpeg');
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
