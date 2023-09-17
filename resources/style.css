@@ -1,0 +1,248 @@
+/* general */
+
+html, body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(0, 0, 0);
+    line-height: 1.1;
+}
+
+ul {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    padding-inline-start: 0;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    line-height: 1;
+}
+
+h1 {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 5rem;
+}
+
+h2 {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 2rem;
+    line-height: 0;
+}
+
+h3 {
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 2rem;
+    margin: 0;
+    line-height: 0;
+}
+
+h4 {
+    font-weight: 100;
+    font-size: 1rem;
+}
+
+h5 {
+    font-weight: 100;
+    font-size: 1rem;
+}
+
+h6 {
+    color:rgb(255, 255, 255);
+    font-size: 1rem;
+    margin: 0 1rem;
+}
+
+p {
+    font-weight: 100;
+    font-size: 1rem;
+}
+
+.firstP p {
+    font-weight: 100;
+    font-size: 1rem;
+    initial-letter: 2;
+}
+
+.firstP::first-letter {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 2rem;
+    color:rgb(255, 255, 255);
+    line-height: 0;
+    text-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.75);
+    float:left;
+    initial-letter: 2;
+    margin-right: 0.3rem;
+}
+
+.button {
+    width: 7.5rem;
+    height: 3rem;
+    background-color: rgb(255, 255, 255);
+    border: 0.1rem solid rgb(0, 0, 0);
+    box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.75);
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 1.5rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button:hover {
+    background-color: rgb(188, 188, 188);
+}
+
+.button:active {
+    box-shadow: 0rem 0rem 0rem;
+}
+
+.icon {
+    height: 2rem;
+    width: auto;
+    overflow: hidden;
+    align-self: center;
+    margin: 0rem;
+    filter: invert(100%);
+}
+
+.icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: grayscale(100%);
+}
+
+/* header */
+
+header {
+    position: fixed;
+    top: 0rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-items: flex-end;
+    align-items: center;
+    height: 3.5rem; 
+    width: 100%;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav li {
+    margin: 0.525rem 1.5rem;
+    list-style-type: none;
+}
+
+.banner {
+    background-image: linear-gradient(to bottom, transparent, rgb(255, 255, 255)), url('./images/profile.jpeg');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    z-index: 1;
+}
+
+
+.pageTop {
+    display: grid;
+    grid-template: 1fr/ repeat(2, 1fr);
+    height: 60rem;
+    position:fixed;
+    top: 0;
+    z-index: 0;
+}
+
+.title {
+    padding: 4rem;
+    z-index: 2;
+}
+
+/* main */
+
+.container {
+    display: grid;
+    margin-top: 60rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+    width: 85%;
+    grid-template: 1fr/ repeat(3, 1fr);
+    gap: 1rem;
+    justify-items: center;
+    align-items: start; 
+    grid-auto-flow: row;
+    position:relative;
+    z-index: 98;
+}
+
+.profile {
+    background-image:linear-gradient(to bottom, transparent, rgb(255, 255, 255)), url('./images/profile.jpeg');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    border: 0.1rem solid rgb(0, 0, 0);
+    grid-area: 1/ 2/ span 1/ span 2 ;
+    height: 30rem;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.project { 
+    background-image:linear-gradient(to bottom, transparent, rgb(255, 255, 255)), url('./images/mixedMessages.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: 0.1rem solid rgb(0, 0, 0);
+    grid-area: 1/ 1/ span 1/ span 1;
+    height: 30rem;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+/* footer */
+
+footer {
+    position: fixed;
+    bottom: 0rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-items: flex-end;
+    align-items: center;
+    height: 3.5rem; 
+    width: 100%;
+    z-index: 99;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+footer li {
+    list-style-type: none;
+    margin: 0 1rem;
+}
